@@ -1987,9 +1987,9 @@ function Recall_PageRoutineEachFrame() {
             lines = [];
             for (var i, _pj_c = 0, _pj_a = util.range(4), _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                art = recall_pairs[i][0].strip();
-                ans = responses[i].strip();
-                correct = recall_pairs[i][1].strip();
+                art = recall_pairs[i][0].trim();
+                ans = responses[i].trim();
+                correct = recall_pairs[i][1].trim();
                 if ((current_fb === "immediate")) {
                     if (fb_inline[i]) {
                         lines.push(((((art + " -> ") + ans) + "   ") + fb_inline[i]));
@@ -2019,7 +2019,7 @@ function Recall_PageRoutineEachFrame() {
                 correct_1 = 0;
                 for (var i, _pj_f = 0, _pj_d = util.range(4), _pj_e = _pj_d.length; (_pj_f < _pj_e); _pj_f += 1) {
                     i = _pj_d[_pj_f];
-                    if ((responses[i].strip().toLowerCase() === recall_pairs[i][1].strip().toLowerCase())) {
+                    if ((responses[i].trim().toLowerCase() === recall_pairs[i][1].trim().toLowerCase())) {
                         correct_1 += 1;
                     }
                 }
@@ -2047,8 +2047,8 @@ function Recall_PageRoutineEachFrame() {
             lines = [header];
             for (var i, _pj_c = 0, _pj_a = util.range(4), _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                art = recall_pairs[i][0].strip();
-                ans = responses[i].strip();
+                art = recall_pairs[i][0].trim();
+                ans = responses[i].trim();
                 line = ((art + " -> ") + ans);
                 if ((((attempt === 1) && (current_fb === "immediate")) && fb_inline[i])) {
                     line = ((line + "   ") + fb_inline[i]);
@@ -2070,18 +2070,18 @@ function Recall_PageRoutineEachFrame() {
                 continue;
             }
             if (_pj.in_es6(key, ["return", "enter"])) {
-                if ((! responses[active_idx].strip())) {
+                if ((! responses[active_idx].trim())) {
                     continue;
                 }
-                correct = recall_pairs[active_idx][1].strip().toLowerCase();
-                user = responses[active_idx].strip().toLowerCase();
+                correct = recall_pairs[active_idx][1].trim().toLowerCase();
+                user = responses[active_idx].trim().toLowerCase();
                 is_correct = (user === correct);
                 locked[active_idx] = true;
                 if (((attempt === 1) && (current_fb === "immediate"))) {
                     if (is_correct) {
                         fb_inline[active_idx] = "\n \u0412\u0435\u0440\u043d\u043e. ";
                     } else {
-                        fb_inline[active_idx] = ("\n \u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442 - " + recall_pairs[active_idx][1].strip());
+                        fb_inline[active_idx] = ("\n \u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442 - " + recall_pairs[active_idx][1].trim());
                     }
                 }
                 if ((active_idx < 3)) {
@@ -2199,7 +2199,7 @@ function Recall_PageRoutineEnd(snapshot) {
     correct_2 = 0;
     for (var i, _pj_c = 0, _pj_a = util.range(4), _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
         i = _pj_a[_pj_c];
-        if ((responses[i].strip().toLowerCase() === recall_pairs[i][1].strip().toLowerCase())) {
+        if ((responses[i].trim().toLowerCase() === recall_pairs[i][1].trim().toLowerCase())) {
             correct_2 += 1;
         }
     }
@@ -2220,8 +2220,8 @@ function Recall_PageRoutineEnd(snapshot) {
     for (var i, _pj_c = 0, _pj_a = util.range(4), _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
         i = _pj_a[_pj_c];
         [art, trans] = recall_pairs[i];
-        resp = responses[i].strip();
-        is_corr = (resp.toLowerCase() === trans.toLowerCase().strip());
+        resp = responses[i].trim();
+        is_corr = (resp.toLowerCase() === trans.toLowerCase().trim());
         psychoJS.experiment.addData(`block_${(BlockLoop.thisN + 1)}_word_${(i + 1)}_art`, art);
         psychoJS.experiment.addData(`block_${(BlockLoop.thisN + 1)}_word_${(i + 1)}_trans`, trans);
         psychoJS.experiment.addData(`block_${(BlockLoop.thisN + 1)}_word_${(i + 1)}_resp`, resp);
@@ -2231,9 +2231,9 @@ function Recall_PageRoutineEnd(snapshot) {
     for (var i, _pj_c = 0, _pj_a = util.range(4), _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
         i = _pj_a[_pj_c];
         [art, trans] = recall_pairs[i];
-        resp = responses[i].strip();
-        status = ((resp.toLowerCase() === trans.toLowerCase().strip()) ? "\u2705 \u0412\u0435\u0440\u043d\u043e " : `❌ Неверно (правильно: ${trans}) `);
-        fb_lines.push(`${art.strip()} → ${status} `);
+        resp = responses[i].trim();
+        status = ((resp.toLowerCase() === trans.toLowerCase().trim()) ? "\u2705 \u0412\u0435\u0440\u043d\u043e " : `❌ Неверно (правильно: ${trans}) `);
+        fb_lines.push(`${art.trim()} → ${status} `);
     }
     fb_summary = fb_lines.join("\n");
     
