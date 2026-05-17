@@ -38,7 +38,7 @@ let expInfo = {
 // Start code blocks for 'Before Experiment'
 // Run 'Before Experiment' code from code_2
 
-const stimuli = [
+let stimuli = [
   ["рыба", "kef"], ["мясо", "lim"], ["каша", "luz"],
   ["миндаль", "nux"], ["пирог", "vem"], ["блины", "lem"],
   ["вафля", "xoz"], ["пряник", "moz"], ["чеснок", "zaf"], ["зефир", "bex"],
@@ -58,7 +58,7 @@ const stimuli = [
 
 stimuli = shuffleArray(stimuli);
 const blocks = Array.from({ length: 15 }, (_, i) => stimuli.slice(i * 4, (i + 1) * 4));
-const fb_conditions = Array(5).fill('immediate').concat(Array(5).fill('delayed')).concat(Array(5).fill('none'));
+let fb_conditions = Array(5).fill('immediate').concat(Array(5).fill('delayed')).concat(Array(5).fill('none'));
 fb_conditions = shuffleArray(fb_conditions);
 // init psychoJS:
 const psychoJS = new PsychoJS({
