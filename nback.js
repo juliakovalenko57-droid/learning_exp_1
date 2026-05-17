@@ -10,6 +10,23 @@ const { Scheduler } = util;
 const { abs, sin, cos, PI: pi, sqrt } = Math;
 const { round } = util;
 
+// ===== BROWSER-COMPATIBLE SHUFFLE (Fisher-Yates) =====
+function shuffleArray(array) {
+    // Создаём копию массива, чтобы не менять оригинал
+    const shuffled = array.slice();
+    
+    // Алгоритм тасования Фишера-Йейтса
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        // Генерируем случайный индекс от 0 до i (включительно)
+        const j = Math.floor(Math.random() * (i + 1));
+        
+        // Меняем элементы местами
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    return shuffled;
+}
+// =====================================================
 
 // store info about the experiment session:
 let expName = 'nback';  // from the Builder filename that created this script
@@ -20,7 +37,6 @@ let expInfo = {
 
 // Start code blocks for 'Before Experiment'
 // Run 'Before Experiment' code from code_2
-const random = require('random');
 
 const stimuli = [
   ["рыба", "kef"], ["мясо", "lim"], ["каша", "luz"],
@@ -40,10 +56,10 @@ const stimuli = [
   ["зелень", "gez"]
 ];
 
-random.shuffle(stimuli);
+stimuli = shuffleArray(stimuli);
 const blocks = Array.from({ length: 15 }, (_, i) => stimuli.slice(i * 4, (i + 1) * 4));
 const fb_conditions = Array(5).fill('immediate').concat(Array(5).fill('delayed')).concat(Array(5).fill('none'));
-random.shuffle(fb_conditions);
+fb_conditions = shuffleArray(fb_conditions);
 // init psychoJS:
 const psychoJS = new PsychoJS({
   debug: true
@@ -1847,7 +1863,7 @@ function Recall_PageRoutineBegin(snapshot) {
     current_block = blocks[BlockLoop.thisN];
     current_fb = fb_conditions[BlockLoop.thisN];
     recall_pairs = list(current_block);
-    Math.random.shuffle(recall_pairs);
+    recall_pairs = shuffleArray(recall_pairs);
     responses = ([" "] * 4);
     locked = ([false] * 4);
     fb_inline = ([null] * 4);
@@ -2008,7 +2024,7 @@ function Recall_PageRoutineEachFrame() {
                     }
                 }
                 attempt = 2;
-                Math.random.shuffle(recall_pairs);
+                recall_pairs = shuffleArray(recall_pairs);
                 responses = (["   "] * 4);
                 locked = ([false] * 4);
                 fb_inline = ([null] * 4);
