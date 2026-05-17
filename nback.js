@@ -1421,7 +1421,7 @@ function motivationRoutineBegin(snapshot) {
     // update component parameters for each repeat
     slider_mot_beg.reset()
     // Run 'Begin Routine' code from code_4
-    slider_mot_beg.marker.size = [0.05, 0.05];
+    // slider_mot_beg.marker.size = [0.05, 0.05];
     key_resp.keys = undefined;
     key_resp.rt = undefined;
     _key_resp_allKeys = [];
@@ -2371,8 +2371,8 @@ function postoprosRoutineBegin(snapshot) {
     slider_emot.reset()
     slider_complex.reset()
     // Run 'Begin Routine' code from code_5
-    slider_mot_end.marker.size = [0.05, 0.05];
-    slider_emot.marker.size = [0.05, 0.05];
+    // slider_mot_end.marker.size = [0.05, 0.05];
+    // slider_emot.marker.size = [0.05, 0.05];
     
     key_resp_3.keys = undefined;
     key_resp_3.rt = undefined;
