@@ -2283,9 +2283,9 @@ function Final_MetricsRoutineBegin(snapshot) {
             avg_rt_total = 0.0;
         }
     
-        thisExp.addData(`sum_diff_${cond}`, s.diff_sum);
-        thisExp.addData(`avg_rt1_${cond}`, avg_rt1);
-        thisExp.addData(`avg_rt_total_${cond}`, avg_rt_total);
+        psychoJS.experiment.addData(`sum_diff_${cond}`, s.diff_sum);
+        psychoJS.experiment.addData(`avg_rt1_${cond}`, avg_rt1);
+        psychoJS.experiment.addData(`avg_rt_total_${cond}`, avg_rt_total);
     }
     
     continueRoutine = false;
