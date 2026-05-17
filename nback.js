@@ -159,6 +159,7 @@ psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.INFO);
 
 var currentLoop;
 var frameDur;
+var fb_stats;
 async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
@@ -487,7 +488,7 @@ async function experimentInit() {
   key_recall = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Run 'Begin Experiment' code from code_recall
-  const fb_stats = {
+  fb_stats = {
       immediate: { diff_sum: 0, rt1_sum: 0, rt_total_sum: 0, n: 0 },
       delayed: { diff_sum: 0, rt1_sum: 0, rt_total_sum: 0, n: 0 },
       none: { diff_sum: 0, rt1_sum: 0, rt_total_sum: 0, n: 0 }
