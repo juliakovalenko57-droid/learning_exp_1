@@ -2715,7 +2715,7 @@ function NASA_TLX_um_nRoutineBegin(snapshot) {
     // update component parameters for each repeat
     slider_um_n.reset()
     // Run 'Begin Routine' code from code_6
-    slider_um_n = new visual.Slider({"win": psychoJS.window, "name": "slider_um_n", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0430\u044f", "|", "\u0412\u044b\u0441\u043e\u043a\u0430\u044f"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": "rating", "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
+    slider_um_n = new visual.Slider({"win": psychoJS.window, "name": "slider_um_n", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0430\u044f", "|", "\u0412\u044b\u0441\u043e\u043a\u0430\u044f"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": ["rating"], "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
     
     key_resp_8.keys = undefined;
     key_resp_8.rt = undefined;
@@ -2880,7 +2880,7 @@ function NASA_TLX_timeRoutineBegin(snapshot) {
     slider_time.reset()
     // Run 'Begin Routine' code from code_7
     slider_um_n.setAutoDraw(false);
-    slider_time = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u0421\u043b\u0430\u0431\u043e\u0435", "|", "\u0421\u0438\u043b\u044c\u043d\u043e\u0435"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": "rating", "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
+    slider_time = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u0421\u043b\u0430\u0431\u043e\u0435", "|", "\u0421\u0438\u043b\u044c\u043d\u043e\u0435"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": ["rating"], "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
     
     key_resp_9.keys = undefined;
     key_resp_9.rt = undefined;
@@ -3048,7 +3048,7 @@ function NASA_TLX_successRoutineBegin(snapshot) {
     slider_success.reset()
     // Run 'Begin Routine' code from code_8
     slider_time.setAutoDraw(false);
-    slider_success = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u0423\u0436\u0430\u0441\u043d\u043e", "|", "\u041e\u0442\u043b\u0438\u0447\u043d\u043e"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": "rating", "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
+    slider_success = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u0423\u0436\u0430\u0441\u043d\u043e", "|", "\u041e\u0442\u043b\u0438\u0447\u043d\u043e"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": ["rating"], "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
     
     psychoJS.experiment.addData('NASA_TLX_success.started', globalClock.getTime());
     NASA_TLX_successMaxDuration = null
@@ -3213,7 +3213,7 @@ function NASA_TLX_effortsRoutineBegin(snapshot) {
     slider_efforts.reset()
     // Run 'Begin Routine' code from code_9
     slider_success.setAutoDraw(false);
-    slider_efforts = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0438\u0435", "|", "\u0412\u044b\u0441\u043e\u043a\u0438\u0435"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": "rating", "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
+    slider_efforts = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0438\u0435", "|", "\u0412\u044b\u0441\u043e\u043a\u0438\u0435"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": ["rating"], "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
     
     psychoJS.experiment.addData('NASA_TLX_efforts.started', globalClock.getTime());
     NASA_TLX_effortsMaxDuration = null
@@ -3378,7 +3378,7 @@ function NASA_TLX_fruRoutineBegin(snapshot) {
     slider_fru.reset()
     // Run 'Begin Routine' code from code_10
     slider_efforts.setAutoDraw(false);
-    slider_fru = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0438q", "|", "\u0412\u044b\u0441\u043e\u043a\u0438\u0439"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": "rating", "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
+    slider_fru = new visual.Slider({"win": psychoJS.window, "name": "slider_time", "startValue": null, "size": [1.3, 0.05], "pos": [0, (- 0.15)], "units": psychoJS.window.units, "labels": ["\u041d\u0438\u0437\u043a\u0438q", "|", "\u0412\u044b\u0441\u043e\u043a\u0438\u0439"], "ticks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "granularity": 0.1, "style": ["rating"], "styleTweaks": [], "opacity": null, "labelColor": [0.9216, 0.9216, 0.9216], "markerColor": "Red", "lineColor": "White", "colorSpace": "rgb", "font": "Open Sans", "labelHeight": 0.04, "labelWrapWidth": 2000, "flip": false, "ori": 0.0, "depth": 0, "readOnly": false});
     
     psychoJS.experiment.addData('NASA_TLX_fru.started', globalClock.getTime());
     NASA_TLX_fruMaxDuration = null
