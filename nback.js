@@ -2178,7 +2178,7 @@ var fb_summary;
 function Recall_PageRoutineEnd(snapshot) {
   return async function () {
 // Объявляем переменные
-var art, trans, resp, is_corr, fb_lines, fb_summary, stats, rt_attempt1, rt_total, correct_2, diff_correct;
+var art, trans, resp, is_corr, fb_lines, fb_summary, stats, rt_attempt1, rt_total, correct_2, diff_correct, line;
     //--- Ending Routine 'Recall_Page' ---
     for (const thisComponent of Recall_PageComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
