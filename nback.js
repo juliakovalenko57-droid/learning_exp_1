@@ -1905,6 +1905,8 @@ var header;
 var lines;
 function Recall_PageRoutineEachFrame() {
   return async function () {
+// Объявляем все переменные
+var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_corr, trans, status;
     //--- Loop for each frame of Routine 'Recall_Page' ---
     // get current time
     t = Recall_PageClock.getTime();
@@ -2174,6 +2176,8 @@ var fb_lines;
 var fb_summary;
 function Recall_PageRoutineEnd(snapshot) {
   return async function () {
+// Объявляем переменные
+var art, trans, resp, is_corr, fb_lines, fb_summary, stats, rt_attempt1, rt_total, correct_2, diff_correct;
     //--- Ending Routine 'Recall_Page' ---
     for (const thisComponent of Recall_PageComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
