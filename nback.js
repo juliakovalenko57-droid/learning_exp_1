@@ -2078,10 +2078,10 @@ var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_cor
                 }
                 correct = recall_pairs[active_idx][1].trim().toLowerCase();
                 user = responses[active_idx].trim().toLowerCase();
-                is_correct = (user === correct);
+                is_corr = (user === correct);
                 locked[active_idx] = true;
                 if (((attempt === 1) && (current_fb === "immediate"))) {
-                    if (is_correct) {
+                    if (is_corr) {
                         fb_inline[active_idx] = "\n \u0412\u0435\u0440\u043d\u043e. ";
                     } else {
                         fb_inline[active_idx] = ("\n \u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442 - " + recall_pairs[active_idx][1].trim());
