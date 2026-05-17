@@ -1906,7 +1906,8 @@ var lines;
 function Recall_PageRoutineEachFrame() {
   return async function () {
 // Объявляем все переменные
-var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_corr, trans, status;
+// Объявляем все переменные
+var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_corr, trans, status, line;
     //--- Loop for each frame of Routine 'Recall_Page' ---
     // get current time
     t = Recall_PageClock.getTime();
