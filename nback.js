@@ -1864,9 +1864,9 @@ function Recall_PageRoutineBegin(snapshot) {
     current_fb = fb_conditions[BlockLoop.thisN];
     recall_pairs = list(current_block);
     recall_pairs = shuffleArray(recall_pairs);
-    responses = ([" "] * 4);
-    locked = ([false] * 4);
-    fb_inline = ([null] * 4);
+    responses = Array(4).fill(" ");
+    locked = Array(4).fill(false);
+    fb_inline = Array(4).fill(null);
     active_idx = 0;
     cursor_visible = true;
     last_cursor_toggle = globalClock.getTime();
@@ -2027,9 +2027,9 @@ var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_cor
                 }
                 attempt = 2;
                 recall_pairs = shuffleArray(recall_pairs);
-                responses = (["   "] * 4);
-                locked = ([false] * 4);
-                fb_inline = ([null] * 4);
+                responses = Array(4).fill("   ");
+                locked = Array(4).fill(false);
+                fb_inline = Array(4).fill(null);
                 active_idx = 0;
                 phase = "input";
                 update_display = true;
