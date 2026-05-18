@@ -2112,7 +2112,7 @@ var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_cor
                             update_display = true;
                         }
                     } else {
-                        if ((key === "Backspace")) {
+                        if ((key === "Delete")) {
                             responses[active_idx] = responses[active_idx].slice(0, (- 1));
                             update_display = true;
                         } else {
