@@ -523,7 +523,7 @@ async function experimentInit() {
     win: psychoJS.window, name: 'slider_complex',
     startValue: undefined,
     size: [1.0, 0.05], pos: [0, (- 0.4)], ori: 0.0, units: psychoJS.window.units,
-    labels: [(- 2), (- 1), 0, 1, 2], fontSize: 0.04, ticks: [1, 2, 3, 4, 5],
+    labels: [1, 2, 3, 4, 5], fontSize: 0.04, ticks: [1, 2, 3, 4, 5],
     granularity: 0.1, style: ["RATING"],
     color: new util.Color([0.9216, 0.9216, 0.9216]), markerColor: new util.Color('Red'), lineColor: new util.Color('White'), 
     opacity: undefined, fontFamily: 'Open Sans', bold: true, italic: false, depth: -2, 
@@ -557,7 +557,7 @@ async function experimentInit() {
   complex_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'complex_text',
-    text: 'Оцените сложность задач в эксперименте. После этого нажмите Enter  для перехода к следующему шагу',
+    text: 'Оцените сложность задач в эксперименте от 1 до 5. После этого нажмите Enter  для перехода к следующему шагу',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.33)], draggable: false, height: 0.04,  wrapWidth: 1.5, ori: 0.0,
