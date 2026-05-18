@@ -2003,9 +2003,9 @@ var art, ans, correct, lines, header, header_text, body_text, keys, resp, is_cor
                 } else {
                     if ((current_fb === "delayed")) {
                         if ((ans.toLowerCase() === correct.toLowerCase())) {
-                            lines.push((((art + " -> ") + ans) + " \u0412\u0435\u0440\u043d\u043e. "));
+                            lines.push((((art + " -> ") + ans) + " \n\u0412\u0435\u0440\u043d\u043e. "));
                         } else {
-                            lines.push(((((art + " -> ") + ans) + " \u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442 - ") + correct));
+                            lines.push(((((art + " -> ") + ans) + " \n\u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442 - ") + correct));
                         }
                     } else {
                         lines.push(((art + " -> ") + ans));
